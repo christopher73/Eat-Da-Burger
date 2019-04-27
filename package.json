@@ -1,0 +1,27 @@
+{
+  "name": "eat-da-burger",
+  "version": "1.0.0",
+  "description": "practicing handlerbars",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/christopher73/Eat-Da-Burger.git"
+  },
+  "author": "chris",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/christopher73/Eat-Da-Burger/issues"
+  },
+  "homepage": "https://github.com/christopher73/Eat-Da-Burger#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.2",
+    "mysql": "^2.17.1",
+    "nodemon": "^1.18.11",
+    "sequelize": "^5.7.5",
+    "sequelize-cli": "^5.4.0"
+  }
+}
