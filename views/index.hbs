@@ -1,0 +1,28 @@
+<h1 class="mb-3 ">Eat the Burger</h1>
+<img class="m-auto" src="/assets/img/burger.png" alt="burger">
+
+<form class="m-3" id="create-form">
+    <div class="form-group">
+        <input class="w-50 m-auto form-control" type="text" id="bn" name="name">
+        <button class="btn btn-primary m-3" id="sb" type="submit">Add Burger</button>
+    </div>
+</form>
+
+<h1 class="m-3">BURGERS</h1>
+
+<table class="table table-bordered table-dark">
+    <thead>
+        <tr>
+
+            <th scope="col">Burger's Name</th>
+
+        </tr>
+    </thead>
+    <tbody>
+
+        {{#each burgers}}
+        {{> burgers/burgers }}
+        {{/each}}
+
+    </tbody>
+</table>

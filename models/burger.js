@@ -1,5 +1,6 @@
 // Import the ORM to create functions that will interact with the database.
-var orm = require("../config/orm.js");
+//NOT USING SEQUILIZER
+var orm = require("../config/orm"); //LOCAL ORM
 
 var burger_db = {
   all: function(cb) {
@@ -8,6 +9,7 @@ var burger_db = {
     });
   },
   // The variables cols and vals are arrays.
+  //cb = CALLBACK
   create: function(cols, vals, cb) {
     orm.create("burgers", cols, vals, function(res) {
       cb(res);

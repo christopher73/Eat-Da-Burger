@@ -1,0 +1,15 @@
+<tr>
+    <td>
+        {{burger_name}}
+    </td>
+    <td>
+        {{#if devoured}}
+        <i class="em em-yum"></i>
+        {{else}}
+
+        <button class="eat-it btn btn-primary" data-id="{{id}}" data-devoured="{{devoured}}">EAT IT !!! </button>
+
+        {{/if}}
+
+    </td>
+</tr>
