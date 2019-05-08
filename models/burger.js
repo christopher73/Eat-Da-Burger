@@ -1,26 +1,19 @@
-// Import the ORM to create functions that will interact with the database.
-//NOT USING SEQUILIZER
-var orm = require("../config/orm"); //LOCAL ORM
-
-var burger_db = {
-  all: function(cb) {
-    orm.all("burgers", function(res) {
-      cb(res);
-    });
-  },
-  // The variables cols and vals are arrays.
-  //cb = CALLBACK
-  create: function(cols, vals, cb) {
-    orm.create("burgers", cols, vals, function(res) {
-      cb(res);
-    });
-  },
-  update: function(objColVals, condition, cb) {
-    orm.update("burgers", objColVals, condition, function(res) {
-      cb(res);
-    });
-  }
+module.exports = function(sequelize, DataTypes) {
+  var Burgers = sequelize.define("Burgers", {
+    burger_name: {
+      type: DataTypes.STRING
+    },
+    devoured: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: false
+    }
+  });
+  return Burgers;
 };
 
-// Export the database functions for the controller (catsController.js).
-module.exports = burger_db;
+// ============================================
+// NOTES:
+// All number types (INTEGER, BIGINT, FLOAT, DOUBLE, REAL, DECIMAL)
+// expose the properties UNSIGNED and ZEROFILL
+// The CHAR and STRING types expose the BINARY property
+// ============================================
